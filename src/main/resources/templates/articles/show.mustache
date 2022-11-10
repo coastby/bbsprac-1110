@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <th>#</th>
+        <th>title</th>
+        <th>content</th>
+    </thead>
+    {{#article}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+    {{/article}}
+
+</table>
+
+<a href="/articles/{{article.id}}/edit">edit</a>
+<a href="/articles/{{article.id}}/delete">edit</a>

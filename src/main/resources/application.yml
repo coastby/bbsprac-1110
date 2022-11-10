@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: localhost8080:3306
+    password: 12345
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
