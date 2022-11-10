@@ -14,10 +14,6 @@ public class ArticleDto {
     private String title;
     private String content;
 
-    public ArticleDto(String title, String content) {
-        this.title = title;
-        this.content = content;
-    }
 
     public Article2 toEntity(){
         return new Article2(this.id, this.title, this.content);

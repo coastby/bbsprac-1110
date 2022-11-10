@@ -65,9 +65,16 @@ public class ArticleController {
     }
     @PostMapping(value = "/edit")
     public String editSave(ArticleDto articleDto){
-        log.info(articleDto.getTitle());
+        log.info("{}", articleDto.getId());
         Article2 saved = articleRepository.save(articleDto.toEntity());
         log.info("{}, {}", saved.getId(), saved.getTitle());
         return "redirect:/articles/list";
     }
+    @GetMapping(value = "/{id}/delete")
+    public String deleteArticle(@PathVariable Long id){
+        articleRepository.deleteById(id);
+        log.info("{}번 게시글을 삭제했습니다.", id);
+        return "redirect:/articles/list";
+    }
+
 }
